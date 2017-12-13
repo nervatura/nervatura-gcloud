@@ -1,0 +1,65 @@
+#! /bin/bash
+echo "--------------------------------------------------"
+echo "Valid entries are:"
+echo "  0: Exit"
+echo "  1: Start Cloud Emulator"
+echo "  2: Stop Cloud Emulator"
+echo "  3: NDI Reload"
+echo "  4: NDI Debug"
+echo "  5: NDI Deploy"
+echo "  6: NPI Reload"
+echo "  7: NPI Debug"
+echo "  8: NPI Deploy"
+echo "  9: NAS Reload"
+echo "  10: NAS Debug"
+echo "  11: NAS Deploy"
+echo "--------------------------------------------------"
+DONE=no
+while [ $DONE = no ]
+do
+  echo
+  echo "--------------------------------------------------"
+  echo Command number:
+  read ENTRY
+  case $ENTRY in
+    0)
+      DONE=yes
+      ;;
+    1)
+      functions start
+      ;;
+    2)
+      functions stop
+      ;;
+    3)
+      functions reset ndi --keep
+      ;;
+    4)
+      functions debug ndi
+      ;;
+    5)
+      functions deploy ndi --trigger-http
+      ;;
+    6)
+      functions reset npi --keep
+      ;;
+    7)
+      functions debug npi
+      ;;
+    8)
+      functions deploy npi --trigger-http
+      ;;
+    9)
+      functions reset nas --keep
+      ;;
+    10)
+      functions debug nas
+      ;;
+    11)
+      functions deploy nas --trigger-http
+      ;;
+    *)
+      echo $ENTRY is an unrecognized command.
+      ;;
+  esac
+done

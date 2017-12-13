@@ -1,0 +1,16 @@
+{
+  "default": {
+    "engine": "$GAE_ENGINE", 
+    "connect": {
+      "host": "/cloudsql/$INSTANCE_CONNECTION_NAME", 
+      "port": "", 
+      "dbname": "$SQL_DATABASE", 
+      "username": "$SQL_USER", 
+      "password": "$SQL_PASSWORD" },
+    "settings":{
+      "db_ssl": "false",
+      "ndi_enabled": "true", 
+      "encrypt_password": "", 
+      "dbs_host_restriction": "" }
+  }
+}

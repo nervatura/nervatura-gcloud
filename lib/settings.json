@@ -1,0 +1,21 @@
+{
+  "APP_LANG": "en",
+  "CHECK_ADMIN": true,
+  "ADMIN_KEY": "",
+  "PYTHON2_PATH": "python",  
+
+  "GAE_ENGINE": "mysql",
+  "INSTANCE_CONNECTION_NAME": "",
+  "SQL_DATABASE": "nervatura",
+  "SQL_USER": "root",
+  "SQL_PASSWORD": "",
+
+  "SMTP_HOST": "",
+  "SMTP_PORT": "",
+  "SMTP_SECURE": true,
+  "SMTP_USER": "",
+  "SMTP_PASSWORD": "",
+
+  "MJ_APIKEY_PUBLIC": "",
+  "MJ_APIKEY_PRIVATE": ""
+}
